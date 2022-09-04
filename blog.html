@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hot News</title>
+  <!-- daisyUI & tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- flowbite stylesheet cdn -->
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+</head>
+<body>
+
+  <header class="container mx-auto my-5">
+    <div class="flex flex-col w-full">
+      <div class="grid h-20 card bg-base-300 rounded-box place-items-center">
+        <!-- navbar -->
+        <div class="navbar bg-base-100">
+          <div class="flex-1">
+            <a
+              class="btn btn-warning text-stone-500 normal-case px-2 md:px-4 md:text-xl"
+              >Hot News</a
+            >
+          </div>
+          <div class="flex-none">
+            <ul class="menu menu-horizontal p-0">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="grid h-full card rounded-box place-items-center">
+        
+          <div id="accordion-collapse" data-accordion="collapse">
+            <h2 id="accordion-collapse-heading-1">
+              <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                <span>Difference between let, var and const?</span>
+                <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+            </h2>
+            <div id="accordion-collapse-body-1" class="" aria-labelledby="accordion-collapse-heading-1">
+              <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                <p class="mb-2 text-gray-500 dark:text-gray-400"><div class="overflow-x-auto">
+                  <table class="table w-full">
+                    <!-- head -->
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Var</th>
+                        <th>Let</th>
+                        <th>Const</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- row 1 -->
+                      <tr>
+                        <th>1</th>
+                        <td>globally scoped</td>
+                        <td>block scoped</td>
+                        <td>block scoped</td>
+                      </tr>
+                      <!-- row 2 -->
+                      <tr class="active">
+                        <th>2</th>
+                        <td>Redeclarable</td>
+                        <td>updatable</td>
+                        <td>Not redeclarable</td>
+                      </tr>
+                      <!-- row 3 -->
+                      <tr>
+                        <th>3</th>
+                        <td>can be declared without being initialized</td>
+                        <td>can be declared without being initialized</td>
+                        <td>can't be declared without being initialized</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div></p>
+              </div>
+            </div>
+            <h2 id="accordion-collapse-heading-2">
+              <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                <span>Difference between map, filter and foreach?</span>
+                <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+            </h2>
+            <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+              <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">forEach(), is used to execute the same code on every element in an array but does not change the array and it returns undefined.</p>
+                <p class="mb-2 text-gray-500 dark:text-gray-400">map() executes the same code on every element in an array and returns a new array with the updated elements.</p>
+                <p class="mb-2 text-gray-500 dark:text-gray-400">filter() checks every element in an array to see if it meets a certain criteria and returns a new array with the elements that return truthy for the criteria.</p>
+              </div>
+            </div>
+            <h2 id="accordion-collapse-heading-3">
+              <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                <span>Difference between arrow function and regular function?</span>
+                <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+            </h2>
+            <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+              <div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">Regular Function: Inside the body of a regular function, arguments is a special array-like object containing the list of arguments with which the function has been invoked.</p>
+                <p class="mb-2 text-gray-500 dark:text-gray-400">Arrow Function: On the other side, no arguments special keyword is defined inside an arrow function. Again (same as with this value), the arguments object is resolved lexically: the arrow function accesses arguments from the outer function.</p>
+                <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+                </ul>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </header>
+  <!-- flowbite javascript file -->
+  <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+</body>
+</html>
