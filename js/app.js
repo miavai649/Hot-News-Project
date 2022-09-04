@@ -84,21 +84,8 @@ const displayCard = async (cards) => {
             <h5>${published_date ? published_date : "published date not available!!!"}</h5>
           </div>
           </div>
-              
-          <div class="flex" >
             <div>
-              <img src="img/icon-eye.png" alt="">
-            </div>
-            <div class="flex ml-3 items-center">
               <h1><span>${total_view ? total_view : "no views!!"}</span> M</h1> 
-            </div>                                                      
-            </div>
-            <div class="text-yellow-500">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
             </div>
             <div>
             <label for="my-modal-4" class="btn btn-warning modal-button text-stone-500" onclick="showModal('${_id}')">Details</i></label>
@@ -126,5 +113,9 @@ const showModal = async (id) => {
 `;
 };
 
+
+loadCard('2');
+
+loadCategories();
 
 
