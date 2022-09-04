@@ -1,54 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hot News</title>
-  <!-- daisyUi & tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-  <header class="container mx-auto my-5">
-    <div class="flex flex-col w-full">
-      <div class="grid h-20 card bg-base-300 rounded-box place-items-center">
-        <!-- navbar -->
-        <div class="navbar bg-base-100">
-          <div class="flex-1">
-            <a class="btn btn-warning text-stone-500 normal-case px-2 md:px-4 md:text-xl">Hot News</a>
-          </div>
-          <div class="flex-none">
-            <ul class="menu menu-horizontal p-0">
-              <li><a>Home</a></li>
-              <li><a>Blog</a></li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hot News</title>
+    <!-- daisyUi & tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="container mx-auto my-5">
+      <div class="flex flex-col w-full">
+        <div class="grid h-20 card bg-base-300 rounded-box place-items-center">
+          <!-- navbar -->
+          <div class="navbar bg-base-100">
+            <div class="flex-1">
+              <a
+                class="btn btn-warning text-stone-500 normal-case px-2 md:px-4 md:text-xl"
+                >Hot News</a
+              >
+            </div>
+            <div class="flex-none">
+              <ul class="menu menu-horizontal p-0">
+                <li><a>Home</a></li>
+                <li><a>Blog</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div> 
-      <div class="divider"></div> 
-      <div class="grid h-20 card rounded-box place-items-center">
-        <ul class="menu menu-horizontal bg-base-100 rounded-box grid grid-cols-3 lg:grid-cols-8 justify-center">
-          <li class="font-semibold text-md lg:text-xl text-center"><a>Breaking News</a></li>
-          <li class="font-semibold text-md lg:text-xl text-center"><a>Regular News</a></li>
-          <li class="font-semibold text-md lg:text-xl text-center"><a>International News</a></li>
-          <li class="font-semibold text-md lg:text-xl text-center"><a>Sports</a></li>
-          <li class="font-semibold text-md lg:text-xl text-center"><a>Entertainment</a></li>
-          <li class="font-semibold text-md lg:text-xl text-center"><a>Culture</a></li>
-          <li class="font-semibold text-md lg:text-xl text-center"><a>Arts</a></li>
-          <li class="font-semibold text-md lg:text-xl text-center"><a>All News</a></li>
-        </ul>
+        <div class="divider"></div>
+        <div class="grid h-20 card rounded-box place-items-center">
+          <ul
+            class="menu menu-horizontal bg-base-100 rounded-box grid grid-cols-3 lg:grid-cols-8 justify-center"
+          >
+            <li class="font-semibold text-md lg:text-xl text-center">
+              <a>Breaking News</a>
+            </li>
+            <li class="font-semibold text-md lg:text-xl text-center">
+              <a>Regular News</a>
+            </li>
+            <li class="font-semibold text-md lg:text-xl text-center">
+              <a>International News</a>
+            </li>
+            <li class="font-semibold text-md lg:text-xl text-center">
+              <a>Sports</a>
+            </li>
+            <li class="font-semibold text-md lg:text-xl text-center">
+              <a>Entertainment</a>
+            </li>
+            <li class="font-semibold text-md lg:text-xl text-center">
+              <a>Culture</a>
+            </li>
+            <li class="font-semibold text-md lg:text-xl text-center">
+              <a>Arts</a>
+            </li>
+            <li class="font-semibold text-md lg:text-xl text-center">
+              <a>All News</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </header>
-  <main>
-    <!-- founded message -->
-    <div class="card w-full container mx-auto bg-white text-black text-primary-content drop-shaow-md mt-5 border-t-2 border-t-gray-300">
-      <div class="card-body">
-        <h2 class="card-title"><span>no</span>items found!</h2>
+    </header>
+    <main>
+      <!-- founded message -->
+      <div
+        class="card w-full container mx-auto bg-white text-black text-primary-content drop-shaow-md mt-5 border-t-2 border-t-gray-300"
+      >
+        <div class="card-body">
+          <h2 class="card-title"><span>no</span>items found!</h2>
+        </div>
       </div>
-    </div>
-  </main>
-  <script src="js/app.js"></script>
-</body>
+      <!-- sort view section -->
+      <section
+        class="container md:flex md:justify-between mb:items-center ml-auto md:mx-auto my-10"
+      >
+        <div class="flex items-center mb-3">
+          <div>
+            <h2 class="mr-4 text-xl font-semibold">Sort By View:</h2>
+          </div>
+          <div>
+            <select class="select select-bordered w-full max-w-xs">
+              <option>Default-1</option>
+              <option>Default-2</option>
+              <option>Default-3</option>
+              <option>Default-4</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <div class="mr-5 bg-yellow-500 p-2 text-stone-500 font-semibold rounded-md">
+            <h5>Today's Pick</h5>
+          </div>
+          <div class="border-2 border-gray-500 rounded-md p-1">
+            Trending
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
 </html>
