@@ -43,11 +43,9 @@
     </header>
     <main>
       <!-- founded message -->
-      <div
-        class="card w-full container mx-auto bg-white text-black text-primary-content drop-shaow-md mt-5 border-t-2 border-t-gray-300"
-      >
+      <div id="item-found" class="card w-full container mx-auto bg-white text-black text-primary-content drop-shaow-md mt-5 border-t-2 border-t-gray-300 hidden">          
         <div class="card-body">
-          <h2 class="card-title"><span>no</span>items found!</h2>
+          <h2 class="card-title"><span id="item-found-count">0</span>items found!</h2>
         </div>
       </div>
       <!-- sort view section -->
@@ -76,18 +74,15 @@
           </div>
         </div>
       </section>
+
+      <!-- spinner -->
+      <div id="spinner-section" class="container mx-auto hidden">
+        <progress class="progress w-full"></progress>
+      </div>
+
       <!-- news section -->
-      <section class="container mx-auto mt-5 mb-20">
-        <div class="card lg:card-side bg-base-100 shadow-xl">
-          <figure><img src="https://placeimg.com/400/400/arch" alt="Album"></figure>
-          <div class="card-body">
-            <h2 class="card-title">New album is released!</h2>
-            <p>Click the button to listen on Spotiwhy app.</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Listen</button>
-            </div>
-          </div>
-        </div>
+      <section id="card-container" class="container mx-auto mt-5 mb-20">
+
       </section>
     </main>
     <!-- footer section -->
