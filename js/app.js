@@ -59,8 +59,72 @@ const displayCard = async (cards) => {
       return -1;
     }
   });
-  
-}
+
+  cards.forEach((card) => {
+    const { _id, title, thumbnail_url, details, author, total_view, rating, category_id } = card;
+    const {name, published_date, img} = author;
+
+    const spinnerSection = document.getElementById('spinner-section');
+    spinnerSection.classList.add('hidden');
+
+    const cardDiv = document.createElement('div');
+    cardDiv.classList.add("card", "lg:card-side", "bg-base-100", "shadow-xl", "mb-5", "mx-auto", "w-11/12");
+    cardDiv.innerHTML =`
+    <figure class="w-full lg:w-1/4"><img src="${thumbnail_url}" alt="Movie"></figure>
+    <div class="card-body lg:w-3/4">
+      <h2 class="card-title">${title}</h2>
+      <p>${details.length > 400 ? details.slice(0, 400) + " ....." : details}</p>
+      <div class="card-actions justify-between items-center">                   
+        <div class="flex">
+          <div class="mr-3">
+            <img class="w-[40px] rounded-full" src="${img ? img : "img not found!!!"}" alt="">
+          </div>
+          <div >
+            <h4 class="font-bold text-xl">${name ? name : "name not found!!!"}</h4>
+            <h5>${published_date ? published_date : "published date not available!!!"}</h5>
+          </div>
+          </div>
+              
+          <div class="flex" >
+            <div>
+              <img src="img/icon-eye.png" alt="">
+            </div>
+            <div class="flex ml-3 items-center">
+              <h1><span>${total_view ? total_view : "no views!!"}</span> M</h1> 
+            </div>                                                      
+            </div>
+            <div class="text-yellow-500">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <div>
+            <label for="my-modal-4" class="btn btn-warning modal-button text-stone-500" onclick="showModal('${_id}')">Details</i></label>
+            </div>
+                      
+          </div>
+      </div>
+    `;
+    cardContainer.appendChild(cardDiv);
+  });
+};
+
+const showModal = async (id) => {
+  const url = `https://openapi.programming-hero.com/api/news/${id}`;
+  const res = await fetch(url);
+  const data = await res.json();
+  // console.log(data.data);
+  const { name, img, published_date } = data.data[0].author;
+  const modalBody = document.getElementById("modal-body");
+  modalBody.textContent = "";
+  modalBody.innerHTML = `
+  <h4 class="mb-3 text-lg font-semibold">Author Name : ${name ? name : "name not found"}</h4>
+  <p class="mb-3 font-semibold">published date : ${published_date ? published_date : "published date not found"}</p>
+  <img src="${img ? img : "image not found"}" />
+`;
+};
 
 
 
